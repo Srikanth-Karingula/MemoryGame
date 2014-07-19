@@ -8,12 +8,14 @@
 
 #import "MEMFlickrImageStore.h"
 #import "MEMFlickrImageEntity.h"
+#import "MEMGlobals.h"
 
 @interface MEMFlickrImageStore()
 @property (nonatomic,strong) NSMutableArray *privateEntities;
 @end
 
 @implementation MEMFlickrImageStore
+
 
 -(instancetype) initPrivate
 {
@@ -40,6 +42,7 @@
     NSLog(@"This is a Singleton. Usage: [MEMFlickrImageStore sharedStore]");
     return  nil;
 }
+
 
 -(NSArray *) allImages
 {

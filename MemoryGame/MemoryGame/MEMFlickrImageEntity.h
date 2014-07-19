@@ -15,4 +15,6 @@
 @property (strong, nonatomic) NSString * locationUrl;
 @property (nonatomic) bool hideImage;
 
++(id) objectWithDictionary:(NSDictionary*)dictionary;
+-(id) initWithDictionary:(NSDictionary*)dictionary;
 @end

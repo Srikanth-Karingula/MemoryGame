@@ -16,7 +16,7 @@ extern const NSInteger kShowTimeInSeconds;
 extern NSString *kGAMESTARTTEXT;
 extern NSString *kGAMESTOPTEXT;
 
-extern const NSString *kFlickrPublicUrl;
+extern NSString *kFlickrPublicUrl;
 
 + (void) logMessage:(NSString *) message;
 + (void) logMessage:(NSString *) message from:(const char *) from;

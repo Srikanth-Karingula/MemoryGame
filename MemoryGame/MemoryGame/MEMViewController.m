@@ -36,6 +36,7 @@
         timer = nil;
         _counter = kShowTimeInSeconds;
         gameLogicObject = [[MEMGameLogic alloc] init];
+        
     }
     return self;
 
@@ -49,7 +50,7 @@
     [flickrImageCollection setDataSource:self];
     
     [self.flickrImageCollection registerClass: [FlickrImageViewCell class] forCellWithReuseIdentifier:@"FlickrImageViewCell"];
-    
+   // [self getFlickrJson];
     [self toggleViews];
 }
 
@@ -268,6 +269,33 @@
     else
     {
         [self stopGame];
+    }
+}
+
+#pragma mark - DataServices
+-(void) getFlickrJson{
+    NSURL *flickrFeedURL = [NSURL URLWithString:kFlickrPublicUrl];
+    NSData *badJSON = [NSData dataWithContentsOfURL:flickrFeedURL];
+    //convert to UTF8 encoded string so that we can manipulate the 'badness' out of Flickr's feed
+    NSString *dataAsString = [NSString stringWithUTF8String:[badJSON bytes]];
+    //remove the leading 'jsonFlickrFeed(' and trailing ')' from the response data so we are left with a dictionary root object
+    NSString *correctedJSONString = [NSString stringWithString:[dataAsString substringWithRange:NSMakeRange (15, dataAsString.length-15-1)]];
+    //correct by removing escape slash (note NSString also uses \ as escape character - thus we need to use \\)
+    correctedJSONString = [correctedJSONString stringByReplacingOccurrencesOfString:@"\\'" withString:@"'"];
+    //re-encode the now correct string representation of JSON back to a NSData object which can be parsed by NSJSONSerialization
+    NSData *correctedData = [correctedJSONString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error = nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:correctedData options:NSJSONReadingAllowFragments error:&error];
+    if (error) {
+        NSLog(@"this still sucks - and we failed");
+    }
+    else {
+        NSLog(@"we successfully parsed the flickr 'JSON' feed: %@", json);
+        NSArray *items = [json objectForKey:@"items"];
+        NSDictionary *item1 = [items objectAtIndex:0];
+        NSLog(@"ITEM: %@", item1);
+        NSLog(@"Title %@", [item1 objectForKey:@"title"]);
+
     }
 }
 @end

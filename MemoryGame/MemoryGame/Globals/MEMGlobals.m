@@ -12,8 +12,8 @@
 
 const NSInteger kNoOfImages = 9; 
 const NSInteger kNoOfImagesInRow = 3;
-const NSInteger kShowTimeInSeconds = 2;
-const NSString * kFlickrPublicUrl = @"";
+const NSInteger kShowTimeInSeconds = 15;
+NSString * kFlickrPublicUrl = @"http://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=data";
 NSString *kGAMESTARTTEXT = @"START";
 NSString *kGAMESTOPTEXT = @"STOP";
 
