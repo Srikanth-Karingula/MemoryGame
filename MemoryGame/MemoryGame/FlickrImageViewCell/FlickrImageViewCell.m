@@ -31,12 +31,26 @@
         {
             return nil;
         }
+//        flickrImageView = [[TJImageView alloc] initWithFrame:OverlayView.bounds];
+//        [self addSubview:flickrImageView];
         self = [arrayOfViews objectAtIndex:0];
         
     }
     return self;
 }
 
-
+- (void) setImageDataToCell:(NSString *) imageUrl
+{
+    self.flickrImageView.image = [TJImageCache imageAtURL:imageUrl delegate:self];
+}
+#pragma mark - TJImageCacheDelegate
+- (void)didGetImage:(IMAGE_CLASS *)image atURL:(NSString *)url
+{
+    flickrImageView.image = image;
+}
+- (void)didFailToGetImageAtURL:(NSString *)url
+{
+    NSLog(@"FAIL TO GET IMAGE AT URL %@", url);
+}
 
 @end

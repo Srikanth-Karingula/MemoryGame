@@ -9,7 +9,7 @@
 #import "MEMFlickrImageEntity.h"
 
 @implementation MEMFlickrImageEntity
-@synthesize uniqueId, name, locationUrl, hideImage;
+@synthesize authorId, title, locationUrl, hideImage;
 
 +(id) objectWithDictionary:(NSDictionary*)dictionary
 {
@@ -23,8 +23,14 @@
     self = [super init];
     if(self)
     {
+        title = [dictionary objectForKey:@"title"];
+        NSDictionary *mediaDicitionary = [dictionary objectForKey:@"media"];
         
+        locationUrl =[mediaDicitionary objectForKey:@"m"];
+        hideImage = false;
+        authorId = [dictionary objectForKey:@"author_id"];
         /*
+         SAMPLE JSON
          {
          author = "nobody@flickr.com (canadafranchiseexpert)";
          "author_id" = "121851038@N03";
@@ -38,34 +44,8 @@
          tags = "new white chart businessman pen pencil writing flow sketch education hand empty plan meeting graph science whiteboard line teacher business seminar workshop blank diagram brainstorming learning data consultant teaching copyspace lecture pointing ideas showing studying flowchart lecturer academic tracing concepts organisation whitecollarworker";
          title = "Gary Prenevost:Finding Your Business - Proper Search Methodology";
          }
-         
-        identifiers = [[HSI_Clips_ClipIdentifiers alloc] initWithDictionary:[dictionary objectForKey:@"identifiers"]];
-        NSArray *temprelation = [dictionary objectForKey:@"relation"];
-        relation = [[NSMutableArray alloc] init];
-        for(NSDictionary *d in temprelation)
-        {
-            [relation addObject:[HSI_Clips_ClipRelation objectWithDictionary:d]];
-        }
-        clipStartTime = [dictionary objectForKey:@"clipStartTime"];
-        clipEndTime = [dictionary objectForKey:@"clipEndTime"];
-        clipDuration = [dictionary objectForKey:@"clipDuration"];
-        clipStatus = [dictionary objectForKey:@"clipStatus"] ;
-        recordingType = [dictionary objectForKey:@"recordingType"];
-        IsStoredOnRemoteLocation = [dictionary objectForKey:@"IsStoredOnRemoteLocation"];
-        NSArray *tempsegments = [dictionary objectForKey:@"segments"];
-        segments = [[NSMutableArray alloc] init];
-        for(NSDictionary *d in tempsegments)
-        {
-            [segments addObject:[HSI_RecordingSegmentConfig objectWithDictionary:d]];
-        }
-        expand = [dictionary objectForKey:@"expand"];
-        NSArray *extendArray = [dictionary objectForKey:@"extension"];
-        extension =[[NSMutableDictionary alloc] init];
-        for(NSDictionary *d in extendArray)
-        {
-            [extension setObject:d forKey:[d objectForKey:@"name"]];
-        }
-         */
+        
+          */
         
     }
     return self;

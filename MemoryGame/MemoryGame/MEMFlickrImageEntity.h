@@ -10,8 +10,8 @@
 
 @interface MEMFlickrImageEntity : NSObject
 
-@property (strong, nonatomic) NSString * uniqueId;
-@property (strong, nonatomic) NSString * name;
+@property (strong, nonatomic) NSString * authorId;
+@property (strong, nonatomic) NSString * title;
 @property (strong, nonatomic) NSString * locationUrl;
 @property (nonatomic) bool hideImage;
 

@@ -8,18 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MEMFlickrDataService.h"
+#import "TJImageCache.h"
+@interface MEMViewController : UIViewController<FlickrDataServiceDelegate, TJImageCacheDelegate>
 
-@interface MEMViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *headerView;
-@property (weak, nonatomic) IBOutlet UIView *collectionViewContainer;
-@property (weak, nonatomic) IBOutlet UIView *questionViewContainer;
-
-@property (weak, nonatomic) IBOutlet UICollectionView *flickrImageCollection;
-
-@property (weak, nonatomic) IBOutlet UILabel *timerUpdateLabel;
-@property (weak, nonatomic) IBOutlet UIButton *gameStartButton;
-
--(IBAction) startOrStopGame:(id)sender;
 
 @end

@@ -49,6 +49,11 @@
     return [self.privateEntities copy];
 }
 
+-(void) removeAllEntries
+{
+    [self.privateEntities removeAllObjects];
+}
+
 -(void) addImageEntity : (MEMFlickrImageEntity *) imageEntity
 {
     [self.privateEntities addObject:imageEntity];
@@ -77,4 +82,8 @@
     [self.privateEntities insertObject:imageEntity atIndex:index];
     
 }
+
+
+
+
 @end

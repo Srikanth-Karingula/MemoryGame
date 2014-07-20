@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+
 @class MEMFlickrImageEntity;
 
 @interface MEMFlickrImageStore : NSObject
 
 @property (readonly, nonatomic, copy) NSArray *allImages;
+
 +(instancetype) sharedStore;
 -(void) addImageEntity : (MEMFlickrImageEntity *) imageEntity;
--(void) hideAllImages;
--(void) updateImageEntityToShowAtIndex:(NSInteger) index;
+-(void) removeAllEntries;
+//-(void) hideAllImages;
+//-(void) updateImageEntityToShowAtIndex:(NSInteger) index;
 @end

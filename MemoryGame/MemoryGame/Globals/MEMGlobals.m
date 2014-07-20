@@ -10,7 +10,7 @@
 
 @implementation MEMGlobals
 
-const NSInteger kNoOfImages = 9; 
+const NSInteger kNoOfImages = 9;
 const NSInteger kNoOfImagesInRow = 3;
 const NSInteger kShowTimeInSeconds = 15;
 NSString * kFlickrPublicUrl = @"http://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=data";

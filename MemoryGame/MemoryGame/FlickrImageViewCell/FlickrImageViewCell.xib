@@ -10,17 +10,16 @@
             <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="17C-u3-6je">
-                    <rect key="frame" x="2" y="2" width="155" height="95"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </imageView>
                 <view contentMode="scaleToFill" id="Eod-Ot-cP7">
                     <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mI7-Br-wZh" userLabel="Title">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="t2H-K7-Lgz">
+                    <rect key="frame" x="2" y="2" width="155" height="95"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mI7-Br-wZh" userLabel="Title">
                     <rect key="frame" x="4" y="5" width="152" height="16"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
@@ -37,7 +36,7 @@
             <connections>
                 <outlet property="OverlayView" destination="Eod-Ot-cP7" id="Jbh-gF-Ofg"/>
                 <outlet property="activityIndicator" destination="LEH-xj-byt" id="EDh-8K-mf0"/>
-                <outlet property="flickrImageView" destination="17C-u3-6je" id="zvQ-V0-KVX"/>
+                <outlet property="flickrImageView" destination="t2H-K7-Lgz" id="pkA-Eo-4Jh"/>
                 <outlet property="titleLabel" destination="mI7-Br-wZh" id="LNZ-RT-I6P"/>
             </connections>
         </view>

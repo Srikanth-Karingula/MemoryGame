@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		C3526DE6197A34810068E79F /* MEMGameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = C3526DE5197A34810068E79F /* MEMGameLogic.m */; };
 		C3526DEB197A483C0068E79F /* MEMGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = C3526DEA197A483C0068E79F /* MEMGlobals.m */; };
+		C3526DFE197B8AB30068E79F /* MEMFlickrDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3526DFD197B8AB30068E79F /* MEMFlickrDataService.m */; };
+		C3526E01197B8FA10068E79F /* MEMDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = C3526E00197B8FA10068E79F /* MEMDataService.m */; };
+		C3526E06197BA51E0068E79F /* MEMGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3526E04197BA51E0068E79F /* MEMGameViewController.m */; };
+		C3526E07197BA51E0068E79F /* MEMGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3526E05197BA51E0068E79F /* MEMGameViewController.xib */; };
+		C373D070197BDE40001B620B /* TJImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C373D06C197BDE40001B620B /* TJImageCache.m */; };
+		C373D071197BDE40001B620B /* TJImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C373D06E197BDE40001B620B /* TJImageView.m */; };
 		C3CDE1071976372300E88DBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CDE1061976372300E88DBC /* Foundation.framework */; };
 		C3CDE1091976372300E88DBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CDE1081976372300E88DBC /* CoreGraphics.framework */; };
 		C3CDE10B1976372300E88DBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CDE10A1976372300E88DBC /* UIKit.framework */; };
@@ -44,6 +50,17 @@
 		C3526DE5197A34810068E79F /* MEMGameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MEMGameLogic.m; path = GameLogic/MEMGameLogic.m; sourceTree = "<group>"; };
 		C3526DE9197A483C0068E79F /* MEMGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MEMGlobals.h; path = Globals/MEMGlobals.h; sourceTree = "<group>"; };
 		C3526DEA197A483C0068E79F /* MEMGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MEMGlobals.m; path = Globals/MEMGlobals.m; sourceTree = "<group>"; };
+		C3526DFC197B8AB30068E79F /* MEMFlickrDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MEMFlickrDataService.h; path = DataServices/MEMFlickrDataService.h; sourceTree = "<group>"; };
+		C3526DFD197B8AB30068E79F /* MEMFlickrDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MEMFlickrDataService.m; path = DataServices/MEMFlickrDataService.m; sourceTree = "<group>"; };
+		C3526DFF197B8FA10068E79F /* MEMDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEMDataService.h; sourceTree = "<group>"; };
+		C3526E00197B8FA10068E79F /* MEMDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMDataService.m; sourceTree = "<group>"; };
+		C3526E03197BA51E0068E79F /* MEMGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MEMGameViewController.h; path = GameView/MEMGameViewController.h; sourceTree = "<group>"; };
+		C3526E04197BA51E0068E79F /* MEMGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MEMGameViewController.m; path = GameView/MEMGameViewController.m; sourceTree = "<group>"; };
+		C3526E05197BA51E0068E79F /* MEMGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MEMGameViewController.xib; path = GameView/MEMGameViewController.xib; sourceTree = "<group>"; };
+		C373D06B197BDE40001B620B /* TJImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJImageCache.h; sourceTree = "<group>"; };
+		C373D06C197BDE40001B620B /* TJImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJImageCache.m; sourceTree = "<group>"; };
+		C373D06D197BDE40001B620B /* TJImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJImageView.h; sourceTree = "<group>"; };
+		C373D06E197BDE40001B620B /* TJImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJImageView.m; sourceTree = "<group>"; };
 		C3CDE1031976372300E88DBC /* MemoryGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CDE1061976372300E88DBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3CDE1081976372300E88DBC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +131,39 @@
 			name = Globals;
 			sourceTree = "<group>";
 		};
+		C3526DFB197B8A7C0068E79F /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				C3526DFC197B8AB30068E79F /* MEMFlickrDataService.h */,
+				C3526DFD197B8AB30068E79F /* MEMFlickrDataService.m */,
+				C3526DFF197B8FA10068E79F /* MEMDataService.h */,
+				C3526E00197B8FA10068E79F /* MEMDataService.m */,
+			);
+			name = DataServices;
+			sourceTree = "<group>";
+		};
+		C3526E02197BA4EA0068E79F /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				C3EF322D1977D4CE0056E70C /* FlickrImageViewCell */,
+				C3526E03197BA51E0068E79F /* MEMGameViewController.h */,
+				C3526E04197BA51E0068E79F /* MEMGameViewController.m */,
+				C3526E05197BA51E0068E79F /* MEMGameViewController.xib */,
+			);
+			name = GameView;
+			sourceTree = "<group>";
+		};
+		C373D069197BDE40001B620B /* TJImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				C373D06B197BDE40001B620B /* TJImageCache.h */,
+				C373D06C197BDE40001B620B /* TJImageCache.m */,
+				C373D06D197BDE40001B620B /* TJImageView.h */,
+				C373D06E197BDE40001B620B /* TJImageView.m */,
+			);
+			path = TJImageCache;
+			sourceTree = "<group>";
+		};
 		C3CDE0FA1976372200E88DBC = {
 			isa = PBXGroup;
 			children = (
@@ -147,10 +197,12 @@
 		C3CDE10C1976372300E88DBC /* MemoryGame */ = {
 			isa = PBXGroup;
 			children = (
+				C373D069197BDE40001B620B /* TJImageCache */,
+				C3526E02197BA4EA0068E79F /* GameView */,
+				C3526DFB197B8A7C0068E79F /* DataServices */,
 				C3526DE8197A48110068E79F /* Globals */,
 				C3526DE3197A343B0068E79F /* GameLogic */,
 				C3EF323319780BEA0056E70C /* DataEntities */,
-				C3EF322D1977D4CE0056E70C /* FlickrImageViewCell */,
 				C3CDE1151976372300E88DBC /* MEMAppDelegate.h */,
 				C3CDE1161976372300E88DBC /* MEMAppDelegate.m */,
 				C3CDE1181976372300E88DBC /* Images.xcassets */,
@@ -288,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3526E07197BA51E0068E79F /* MEMGameViewController.xib in Resources */,
 				C3CDE1111976372300E88DBC /* InfoPlist.strings in Resources */,
 				C3EF32321977D4CE0056E70C /* FlickrImageViewCell.xib in Resources */,
 				C3FFCF4C1976D75B001EBF0B /* MEMViewController.xib in Resources */,
@@ -312,11 +365,16 @@
 			files = (
 				C3526DE6197A34810068E79F /* MEMGameLogic.m in Sources */,
 				C3FFCF4B1976D75B001EBF0B /* MEMViewController.m in Sources */,
+				C373D070197BDE40001B620B /* TJImageCache.m in Sources */,
 				C3526DEB197A483C0068E79F /* MEMGlobals.m in Sources */,
+				C3526E01197B8FA10068E79F /* MEMDataService.m in Sources */,
 				C3EF323619780C900056E70C /* MEMFlickrImageEntity.m in Sources */,
 				C3EF32311977D4CE0056E70C /* FlickrImageViewCell.m in Sources */,
+				C373D071197BDE40001B620B /* TJImageView.m in Sources */,
 				C3CDE1171976372300E88DBC /* MEMAppDelegate.m in Sources */,
 				C3EF323919780DA40056E70C /* MEMFlickrImageStore.m in Sources */,
+				C3526E06197BA51E0068E79F /* MEMGameViewController.m in Sources */,
+				C3526DFE197B8AB30068E79F /* MEMFlickrDataService.m in Sources */,
 				C3CDE1131976372300E88DBC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
